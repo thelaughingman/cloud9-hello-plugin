@@ -4,10 +4,11 @@ if [ $# == 0 ]; then
   exit 1
 fi
 for F in $*; do
+  WRAPPED=`echo "$F" | sed -E 's/\.js$/-wrapped/'`.js
   echo -n '// Wrapped in JavaScript, to avoid cross-origin restrictions, created using wrap-in-js.sh
 define(function() {
-return ' > "$F".js
-  cat "$F" | sed 's/\\/\\\\/g;'" s/'/\\\\'/g; s/^/'/g; s/$/\\\\n' +/g" >> "$F".js
-  echo "'';});" >> "$F".js
+return ' > "$WRAPPED"
+  cat "$F" | sed 's/\\/\\\\/g;'" s/'/\\\\'/g; s/^/'/g; s/$/\\\\n' +/g" >> "$WRAPPED"
+  echo "'';});" >> "$WRAPPED"
 done
 
