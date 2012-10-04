@@ -1,6 +1,10 @@
 This is a simple Hello world plugin for the Cloud9 IDE (http://c9.io),
 demonstrating the very basics of the Cloud9 extension system.
 
+The functionality of the plugin isn't very interesting by itself:
+in the end all it does is a simple console.log() call. But it illustrates
+the basics of a plugin setup for Cloud9.
+
 Install the plugin in Cloud9 by using the `Tools > Extension Manager` menu,
 and entering:
 
