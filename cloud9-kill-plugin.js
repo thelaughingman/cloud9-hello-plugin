@@ -2,7 +2,7 @@ define(function(require, exports, module) {
 
 var ext = require("core/ext");
 var menus = require("ext/menus/menus");
-var sys = require('sys')
+var sys = require('sys');
 var exec = require('child_process').exec;
 
 module.exports = ext.register("ext/kill/killplugin", {
@@ -15,7 +15,7 @@ module.exports = ext.register("ext/kill/killplugin", {
 
     killClicked: function() {
         function puts(error, stdout, stderr) { sys.puts(stdout) }
-        exec("lkill -9 $(lsof -t -i tcp:3001)", puts);
+        exec("kill -9 $(lsof -t -i tcp:3001)", puts);
     },
         
     hook : function() {
