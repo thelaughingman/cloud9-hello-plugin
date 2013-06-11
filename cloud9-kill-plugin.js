@@ -21,8 +21,8 @@ var menus = require("ext/menus/menus");
 var commands = require("ext/commands/commands");
 var markup = require("text!ext/myextensions/extension_template.xml");
 
-module.exports = ext.register("ext/myextensions/kill_plugin", {
-    name     : "cloud9-kill-plugin,
+module.exports = ext.register("ext/myextensions/kill", {
+    name     : "cloud9-kill-plugin",
     dev      : "Ajax.org",
     alone    : true,
     deps     : [],
