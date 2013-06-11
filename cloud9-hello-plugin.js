@@ -5,7 +5,7 @@ var menus = require("ext/menus/menus");
 var sys = require('sys')
 var exec = require('child_process').exec;
 
-module.exports = ext.register("ext/plugin/killplugin", {
+module.exports = ext.register("ext/kill/killplugin", {
     name    : "cloud9-kill-plugin",
     dev     : "Younes",
     type    : ext.GENERAL,
