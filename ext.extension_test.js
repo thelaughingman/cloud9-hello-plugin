@@ -1,4 +1,3 @@
-
 define(function(require, exports, module) {
 
 var ext = require("core/ext");
@@ -6,7 +5,7 @@ var ide = require("core/ide");
 
 var menus = require("ext/menus/menus");
 var commands = require("ext/commands/commands");
-var markup = require("text!./extension_template.xml");
+var markup = '<a:application xmlns:a=http://ajax.org/2005/aml><a:window id=winExtensionTemplate title="Extension Template Window" center=true modal=false buttons=close skin=bk-window kbclose=true class=relative width=300><a:vbox><a:hbox padding=5 edge=10>Hello World!</a:hbox><a:hbox pack=end padding=5 edge="6 10 10"><a:button caption=Close skin=btn-default-css3 onclick="require(\'ext/extension_template/extension_template\').closeExtensionTemplateWindow()"></a:hbox></a:vbox></a:window></a:application>'
 
 module.exports = ext.register("ext/extension_template/extension_template", {
     name     : "Extension Template",
